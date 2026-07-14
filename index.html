@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Put this exact link inside your <head> tags -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="/style-sheet/diveder-css/body.css">
+    <link rel="stylesheet" href="/style-sheet/diveder-css/main.css">
+    <link rel="stylesheet" href="/style-sheet/home.css">
+    <link rel="stylesheet" href="/style-sheet/aside-bar.css">
+    <link rel="stylesheet" href="/style-sheet/data-container.css">
+    <link rel="stylesheet" href="/style-sheet/about.css">
+    <link rel="stylesheet" href="/style-sheet/expanse-list.css">
+    <link rel="stylesheet" href="/style-sheet/edit-amount.css">
+    <title>Finance-Tracker</title>
+</head>
+<body>
+    
+    <header>
+        <h1>
+            <i class="fa-solid fa-chart-line"></i> Finance Tracker
+        </h1>
+    </header>
+
+    <aside class="aside-bar">
+
+
+<button class="aside-bar-buttons aside-bar-button-clicked" onclick="dashboard()"><i class="fa-solid fa-table-columns"></i> Dashboard</button>
+<button class="aside-bar-buttons no-clicked" onclick="transaction()"><i class="fa-solid fa-money-bill-transfer"></i> Transactions</button>
+<button class="aside-bar-buttons no-clicked" onclick="saving()"><i class="fa-solid fa-piggy-bank"></i> Saving</button>
+<button class="aside-bar-buttons no-clicked" onclick="academic()"><i class="fa-solid fa-graduation-cap"></i> Academic</button>
+<button class="aside-bar-buttons no-clicked" onclick="report()"><i class="fa-solid fa-chart-column"></i> Reports</button>
+<button class="aside-bar-buttons no-clicked" onclick="analytics()"><i class="fa-solid fa-chart-line"></i> Analytics</button>
+<button class="aside-bar-buttons no-clicked" onclick="setting()"><i class="fa-solid fa-gear"></i> Setting</button>
+<button class="aside-bar-buttons no-clicked" onclick="about()"><i class="fa-solid fa-circle-info"></i> About</button>
+
+    </aside>
+
+<main>
+
+<!-- dashboard is here -->
+<section class="dashboard-section" id="dashboard-section">
+
+<div class="edit-amount-page home-data-container hide-ui" id="edit-amount-screen">
+    <button class="back-but" id="cut-edit-ui"><i class="fa-solid fa-arrow-left"></i></button>
+    <h1>Edit Section</h1>
+    <input type="number" id="edit-amount-input" placeholder="₹0.00">
+    <button class="save-transaction-button edit-amount-but" onclick="saveEdit()">Save</button>
+</div>
+
+
+<div class="div-data-container ">
+
+    <div class="home-data-container">
+        
+<button class="edit"><i class="fa-solid fa-pencil"></i></button>
+
+    <h3 class="text">Net Worth</h3>
+    <h3 class="text amount-text" id="net-wortth-amount">₹0</h3>
+</div>
+<div class="home-data-container">
+    <button class="edit"><i class="fa-solid fa-pencil"></i></button>
+    <h3 class="text">Total Income</h3>
+    <h3 class="text amount-text" id="total-income-amount">₹0</h3>
+</div>
+<div class="home-data-container">
+    <button class="edit"><i class="fa-solid fa-pencil"></i></button>
+    <h3 class="text">Cash Balance</h3>
+    <h3 class="text amount-text" id="cash-balance-amount">₹0</h3>
+</div>
+
+</div>
+
+<div class="div-data-container">
+
+    <div class="home-data-container">
+        <button class="edit"><i class="fa-solid fa-pencil"></i></button>
+    <h3 class="text">Bank Balance</h3>
+    <h3 class="text amount-text" id="bank-balance-amount">₹0</h3>
+</div>
+<div class="home-data-container">
+    <button class="edit"><i class="fa-solid fa-pencil"></i></button>
+    <h3 class="text">Savings</h3>
+    <h3 class="text amount-text" id="saving-amount">₹0 </h3>
+</div>
+<div class="home-data-container">
+    <button class="edit"><i class="fa-solid fa-pencil"></i></button>
+    <h3 class="text">Total Fund</h3>
+    <h3 class="text amount-text" id="total-fund-amount">₹0</h3>
+</div>
+
+
+</div>
+</section>
+
+<!-- about section is here -->
+
+<section class="about-page-section" id="about-page-section">
+    
+    <div class="about-section">
+        <h1>About Us or ME</h1>
+        <p>Hello! welcome to our app. Our app may contain bugs maybe i don't know but but the important thing
+            is we provide user edit buttons so if he think something is wrong with the budget just edit it hope its 
+            doesn't effect the whole app i don't know just check by yourself. ;)
+        </p>
+    </div>
+</section>
+
+<section class="expanse-list-section" id="expanse-list-section">
+
+
+
+    <div class="div-expanse-list">
+<h1>Add New Transactions</h1>
+    <label for="amount">Amount</label>
+    <input type="number" placeholder="₹0.00" class="expanse-list-item">
+
+    
+        <label for="payment-mode">Payment Mode</label>
+    <select id="" class="expanse-list-item">
+        <option value="">Cash</option>
+        <option value="">Online</option>
+    </select>
+
+
+    <label for="transactions-type">Transactions Type</label>
+    <select id="" class="expanse-list-item">
+        <option value="" >Income <span>+</span></option>
+        <option value="">Expanse <span>-</span></option>
+    </select>
+
+
+
+    
+
+
+<div class="expanse-category-disc">
+    <select id="" class="expanse-list-item">
+        <option value="">Saving</option>
+        <option value="">Funds</option>
+        <option value="">Cash Balance</option>
+        <option value="">Bank Balance</option>
+    </select>
+
+
+    <input type="text" id="" class="expanse-list-item" placeholder="Disription" list="category">
+    <datalist id="category">
+        <option value="Food"></option>
+    </datalist>
+</div>
+    
+    
+    
+
+    <label for="">Date</label>
+    <input type="date" id="" class="expanse-list-item">
+
+    <button class="save-transaction-button expanse-list-item">Save Transaction</button>
+
+    </div>
+</section>
+
+</main>
+
+<script src="/scripts/aside-button.js"></script>
+<script src="/scripts/switch-page.js"></script>
+<script src="/scripts/edit-amount.js"></script>
+<script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js"></script>
+</body>
+</html>
