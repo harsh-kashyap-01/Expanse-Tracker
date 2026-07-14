@@ -1,0 +1,12 @@
+
+main{
+    margin: 0px;
+    background: linear-gradient(to bottom , #d8ecff, rgb(255, 255, 255));
+    position: absolute;
+    left: 35vh;
+    bottom: 0vh;
+    top: 7vh;
+    width: 80%;
+    height: auto;
+    min-height: 80vh;
+}
