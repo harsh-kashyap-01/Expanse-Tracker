@@ -6,14 +6,7 @@ body{
     background: white;
 }
 
-header{
-    position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:1000;
-    background:white;
-}
+
 
 /* ===========================
    Mobile (768px and below)
@@ -32,13 +25,12 @@ header{
     }
 
     header{
-        width: 100%;
-        min-height: 60px;
-        padding: 0 15px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        box-sizing: border-box;
-    }
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:white;
+}
 
 }
