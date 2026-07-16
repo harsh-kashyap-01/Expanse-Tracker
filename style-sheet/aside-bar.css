@@ -37,40 +37,43 @@
 /* ===========================
    Mobile (768px and below)
 =========================== */
-@media (max-width: 768px) {
+@media (max-width: 768px){
 
     .aside-bar{
+        position: fixed;
+        bottom: 0;
+        left: 0;
         width: 100%;
-        min-height: auto;
+        height: 65px;
+        min-height: 65px;
+
+        display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
+
+        background: white;
+        border-top: 1px solid #ddd;
         border-right: none;
-        border-bottom: solid rgb(199, 199, 199) 0.2px;
-        padding: 10px 5px;
-        box-sizing: border-box;
-        position: sticky;
-        top: 0;
-        z-index: 100;
+
+        z-index: 1000;
     }
 
     .aside-bar-buttons{
-        width: auto;
-        min-width: 70px;
-        min-height: 45px;
-        margin-top: 0;
-        padding: 8px;
+        width: 60px;
+        height: 60px;
+        margin: 0;
         font-size: 12px;
         border-radius: 8px;
     }
 
-    .aside-bar-buttons:hover{
-        font-size: 12px;
-    }
-
-    .aside-bar-button-clicked{
-        background-color: rgba(53, 125, 233, 0.205);
-        color: rgb(37, 82, 165);
+    main{
+        width: 100%;
+        left: 0;
+        top: 60px;
+        padding: 15px;
+        padding-bottom: 80px; /* Space for bottom menu */
+        box-sizing: border-box;
     }
 
 }
