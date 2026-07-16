@@ -34,46 +34,50 @@
     color: rgb(37, 82, 165);
 }
 
-/* ===========================
-   Mobile (768px and below)
-=========================== */
-@media (max-width: 768px){
+
+@media (max-width: 768px) {
 
     .aside-bar{
         position: fixed;
-        bottom: 0;
+        top: 60px; /* Below the header */
         left: 0;
-        width: 100%;
-        height: 65px;
-        min-height: 65px;
+        width: 70px;
+        height: calc(100vh - 60px);
 
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        flex-direction: column;
         align-items: center;
 
         background: white;
-        border-top: 1px solid #ddd;
-        border-right: none;
-
+        border-right: 1px solid #ddd;
         z-index: 1000;
     }
 
     .aside-bar-buttons{
         width: 60px;
         height: 60px;
-        margin: 0;
-        font-size: 12px;
+        margin: 5px 0;
+        font-size: 11px;
         border-radius: 8px;
     }
 
     main{
-        width: 100%;
+        margin-left: 70px;
+        width: calc(100% - 70px);
         left: 0;
         top: 60px;
         padding: 15px;
-        padding-bottom: 80px; /* Space for bottom menu */
         box-sizing: border-box;
+    }
+
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background: white;
+        z-index: 1100;
     }
 
 }
