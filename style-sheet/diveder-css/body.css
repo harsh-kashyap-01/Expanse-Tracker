@@ -1,0 +1,42 @@
+*{
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background: white;
+}
+header{
+    margin: 0px;
+    border-bottom: solid rgb(199, 199, 199) 0.2px;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+}
+
+/* ===========================
+   Mobile (768px and below)
+=========================== */
+@media (max-width: 768px) {
+
+    *{
+        box-sizing: border-box;
+    }
+
+    body{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        background: white;
+    }
+
+    header{
+        width: 100%;
+        min-height: 60px;
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+
+}

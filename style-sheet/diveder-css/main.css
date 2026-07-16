@@ -1,0 +1,30 @@
+
+main{
+    margin: 0px;
+    background: linear-gradient(to bottom , #d8ecff, rgb(255, 255, 255));
+    position: absolute;
+    left: 35vh;
+    bottom: 0vh;
+    top: 7vh;
+    width: 80%;
+    height: auto;
+    min-height: 80vh;
+}
+
+/* ===========================
+   Mobile (768px and below)
+=========================== */
+@media (max-width: 768px) {
+
+    main{
+        position: relative;
+        left: 0;
+        top: 0;
+        bottom: auto;
+        width: 100%;
+        min-height: 100vh;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+}
