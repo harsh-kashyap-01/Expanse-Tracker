@@ -1,0 +1,68 @@
+.dashboard-section{
+    width: 100%;
+    height: auto;
+    display: none;
+    flex-direction: column;
+    position: relative;
+    left: 10vh;
+}
+
+.div-data-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-top: 10px;
+}
+
+.home-data-container{
+    box-shadow: 0px 0px 5px 0.1px rgb(211, 211, 211);
+    background-color: white;
+    padding: 10px;
+    margin: 0px;
+    width: 25%;
+    height: auto;
+    min-height: 15vh;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.amount-text{
+    color: #33BC76;
+}
+
+
+/* ===========================
+   Mobile (768px and below)
+=========================== */
+@media (max-width: 768px) {
+
+    .dashboard-section{
+        width: 100%;
+        left: 0;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .div-data-container{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .home-data-container{
+        width: 100%;
+        min-height: auto;
+        margin: 0;
+        padding: 15px;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+
+    .amount-text{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+}
