@@ -85,5 +85,8 @@
 
     .aside-bar-buttons{
         font-size: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
