@@ -79,5 +79,11 @@
         background: white;
         z-index: 1100;
     }
+.aside-bar-buttons span{
+        display: none;
+    }
 
+    .aside-bar-buttons{
+        font-size: 22px;
+    }
 }
