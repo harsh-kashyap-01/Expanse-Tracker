@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/style-sheet/about.css">
     <link rel="stylesheet" href="/style-sheet/expanse-list.css">
     <link rel="stylesheet" href="/style-sheet/edit-amount.css">
+    <link rel="stylesheet" href="/style-sheet/saving.css">
     <title>Finance-Tracker</title>
 </head>
 <body>
@@ -21,51 +22,28 @@
         <h1>
             <i class="fa-solid fa-chart-line"></i> Finance Tracker
         </h1>
+        <button class="menu-but" onclick="menuSectionBut()">||</button>
+
+
+        <div class="menu-section" id="menu-section">
+
+            <button class=" no-clicked in-menu" onclick="analytics()"><i class="fa-solid fa-chart-line"></i> Analytics</button>
+            <button class=" no-clicked in-menu" onclick="setting()"><i class="fa-solid fa-gear"></i> Setting</button>
+            <button class=" no-clicked in-menu" onclick="about()"><i class="fa-solid fa-circle-info"></i> About</button>
+         
+            
+        </div>
     </header>
 
-   <aside class="aside-bar">
+    <aside class="aside-bar">
 
-    <button class="aside-bar-buttons aside-bar-button-clicked" onclick="dashboard()">
-        <i class="fa-solid fa-table-columns"></i>
-        <span>Dashboard</span>
-    </button>
 
-    <button class="aside-bar-buttons no-clicked" onclick="transaction()">
-        <i class="fa-solid fa-money-bill-transfer"></i>
-        <span>Transactions</span>
-    </button>
+<button class="aside-bar-buttons aside-bar-button-clicked" onclick="dashboard()"><i class="fa-solid fa-table-columns"></i> Dashboard</button>
+<button class="aside-bar-buttons no-clicked" onclick="transaction()"><i class="fa-solid fa-money-bill-transfer"></i> Transactions</button>
+<button class="aside-bar-buttons no-clicked" onclick="saving()"><i class="fa-solid fa-piggy-bank"></i> Saving</button>
+<button class="aside-bar-buttons no-clicked" onclick="report()"><i class="fa-solid fa-chart-column"></i> Reports</button>
 
-    <button class="aside-bar-buttons no-clicked" onclick="saving()">
-        <i class="fa-solid fa-piggy-bank"></i>
-        <span>Saving</span>
-    </button>
-
-    <button class="aside-bar-buttons no-clicked" onclick="academic()">
-        <i class="fa-solid fa-graduation-cap"></i>
-        <span>Academic</span>
-    </button>
-
-    <button class="aside-bar-buttons no-clicked" onclick="report()">
-        <i class="fa-solid fa-chart-column"></i>
-        <span>Reports</span>
-    </button>
-
-    <button class="aside-bar-buttons no-clicked" onclick="analytics()">
-        <i class="fa-solid fa-chart-line"></i>
-        <span>Analytics</span>
-    </button>
-
-    <button class="aside-bar-buttons no-clicked" onclick="setting()">
-        <i class="fa-solid fa-gear"></i>
-        <span>Setting</span>
-    </button>
-
-    <button class="aside-bar-buttons no-clicked" onclick="about()">
-        <i class="fa-solid fa-circle-info"></i>
-        <span>About</span>
-    </button>
-
-</aside>
+    </aside>
 
 <main>
 
@@ -94,11 +72,7 @@
     <h3 class="text">Total Income</h3>
     <h3 class="text amount-text" id="total-income-amount">₹0</h3>
 </div>
-<div class="home-data-container">
-    <button class="edit"><i class="fa-solid fa-pencil"></i></button>
-    <h3 class="text">Cash Balance</h3>
-    <h3 class="text amount-text" id="cash-balance-amount">₹0</h3>
-</div>
+
 
 </div>
 
@@ -114,12 +88,26 @@
     <h3 class="text">Savings</h3>
     <h3 class="text amount-text" id="saving-amount">₹0 </h3>
 </div>
-<div class="home-data-container">
+
+
+
+
+
+</div>
+
+<div class="div-data-container">
+
+    <div class="home-data-container">
     <button class="edit"><i class="fa-solid fa-pencil"></i></button>
     <h3 class="text">Total Fund</h3>
     <h3 class="text amount-text" id="total-fund-amount">₹0</h3>
 </div>
 
+<div class="home-data-container">
+    <button class="edit"><i class="fa-solid fa-pencil"></i></button>
+    <h3 class="text">Cash Balance</h3>
+    <h3 class="text amount-text" id="cash-balance-amount">₹0</h3>
+</div>
 
 </div>
 </section>
@@ -136,6 +124,8 @@
         </p>
     </div>
 </section>
+
+<!-- expanse list is here -->
 
 <section class="expanse-list-section" id="expanse-list-section">
 
@@ -191,11 +181,29 @@
     </div>
 </section>
 
+<section class="saving-page-section" id="saving-page-section">
+
+<div class="saving-edit">
+
+    <h1>Saving</h1>
+    <div class="home-data-container">
+    <button class="edit"><i class="fa-solid fa-pencil"></i></button>
+    <h3 class="text">Savings</h3>
+    <h3 class="text amount-text" id="saving-amount">₹0 </h3>
+</div>
+
+</div>
+
+</section>
+
+
 </main>
 
 <script src="/scripts/aside-button.js"></script>
 <script src="/scripts/switch-page.js"></script>
 <script src="/scripts/edit-amount.js"></script>
+<script src="/scripts/menu.js"></script>
+
 <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js"></script>
 </body>
 </html>
