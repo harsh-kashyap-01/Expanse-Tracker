@@ -28,7 +28,7 @@ function transaction(){
 
 }
 
-function saving(){
+function savingBut(){
     savingPage.style.display = "flex";
     expansePage.style.display = "none";
     dashboardPage.style.display = "none";
