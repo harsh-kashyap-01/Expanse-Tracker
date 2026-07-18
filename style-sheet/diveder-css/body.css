@@ -50,6 +50,7 @@ header{
         box-sizing: border-box;
         position: fixed;
         z-index: 6;
+        background-color:white;
     }
 
     .menu-but{
