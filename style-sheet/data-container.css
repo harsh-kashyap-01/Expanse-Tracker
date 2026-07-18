@@ -1,7 +1,7 @@
 .dashboard-section{
     width: 100%;
     height: auto;
-    display: none;
+    display: flex;
     flex-direction: column;
     position: relative;
     left: 10vh;
@@ -41,19 +41,26 @@
         left: 0;
         padding: 10px;
         box-sizing: border-box;
+        overflow: hidden;
     }
 
     .div-data-container{
         width: 100%;
         flex-direction: column;
+        display: flex;
+        flex-direction: row;
         align-items: center;
         gap: 15px;
         margin-top: 15px;
     }
 
     .home-data-container{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
         width: 100%;
-        min-height: auto;
+        height: auto;
+        min-height: 10vh;
         margin: 0;
         padding: 15px;
         border-radius: 10px;
