@@ -3,13 +3,14 @@ let dashboardPage = document.getElementById("dashboard-section");
 let expansePage = document.getElementById("expanse-list-section");
 let aboutPage = document.getElementById("about-page-section");
 let savingPage = document.getElementById("saving-page-section");
+let recordPage = document.getElementById("records-section");
 
 function dashboard(){
     dashboardPage.style.display = "flex";
     expansePage.style.display = "none";
     aboutPage.style.display = "none";
     savingPage.style.display = "none";
-
+    recordPage.style.display = "none";
 }
 
 function about(){
@@ -17,7 +18,7 @@ function about(){
     dashboardPage.style.display = "none";
     expansePage.style.display = "none";
     savingPage.style.display = "none";
-
+    recordPage.style.display = "none";
 }
 
 function transaction(){
@@ -25,11 +26,20 @@ function transaction(){
     dashboardPage.style.display = "none";
     aboutPage.style.display = "none";
     savingPage.style.display = "none";
-
+    recordPage.style.display = "none";
 }
 
-function savingBut(){
+function saving(){
     savingPage.style.display = "flex";
+    expansePage.style.display = "none";
+    dashboardPage.style.display = "none";
+    aboutPage.style.display = "none";
+    recordPage.style.display = "none";
+}
+
+function records(){
+    recordPage.style.display = "block";
+    savingPage.style.display = "none";
     expansePage.style.display = "none";
     dashboardPage.style.display = "none";
     aboutPage.style.display = "none";
