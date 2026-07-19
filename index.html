@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="/style-sheet/diveder-css/body.css">
     <link rel="stylesheet" href="/style-sheet/diveder-css/main.css">
-    <link rel="stylesheet" href="/style-sheet/home.css">
+    <!-- <link rel="stylesheet" href="/style-sheet/home.css"> -->
     <link rel="stylesheet" href="/style-sheet/aside-bar.css">
     <link rel="stylesheet" href="/style-sheet/data-container.css">
     <link rel="stylesheet" href="/style-sheet/about.css">
     <link rel="stylesheet" href="/style-sheet/expanse-list.css">
     <link rel="stylesheet" href="/style-sheet/edit-amount.css">
     <link rel="stylesheet" href="/style-sheet/saving.css">
+    <link rel="stylesheet" href="/style-sheet/records.css">
+
     <title>Finance-Tracker</title>
 </head>
 <body>
@@ -22,9 +24,7 @@
         <h1>
             <i class="fa-solid fa-chart-line"></i> Finance Tracker
         </h1>
-        <button class="menu-but" onclick="menuSectionBut()">
-            <i class="fa-solid fa-bars"></i>
-        </button>
+        <button class="menu-but" onclick="menuSectionBut()">||</button>
 
 
         <div class="menu-section" id="menu-section">
@@ -44,6 +44,8 @@
 <button class="aside-bar-buttons no-clicked" onclick="transaction()"><i class="fa-solid fa-money-bill-transfer"></i> Transactions</button>
 <button class="aside-bar-buttons no-clicked" onclick="savingBut()"><i class="fa-solid fa-piggy-bank"></i> Saving</button>
 <button class="aside-bar-buttons no-clicked" onclick="report()"><i class="fa-solid fa-chart-column"></i> Reports</button>
+<button class="aside-bar-buttons no-clicked" onclick="records()"><i class="fa-solid fa-receipt"></i> Records</button>
+
 
     </aside>
 
@@ -56,7 +58,7 @@
     <button class="back-but" id="cut-edit-ui"><i class="fa-solid fa-arrow-left"></i></button>
     <h1>Edit Section</h1>
     <input type="number" id="edit-amount-input" placeholder="₹0.00">
-    <button class="save-transaction-button edit-amount-but" onclick="saveEdit()">Save</button>
+    <button class="save-transaction-button edit-amount-but" onclick="saveEdit()" id="save-edit">Save</button>
 </div>
 
 
@@ -136,20 +138,20 @@
     <div class="div-expanse-list">
 <h1>Add New Transactions</h1>
     <label for="amount">Amount</label>
-    <input type="number" placeholder="₹0.00" class="expanse-list-item">
+    <input type="number" placeholder="₹0.00" class="expanse-list-item" id="input-amount">
 
     
         <label for="payment-mode">Payment Mode</label>
-    <select id="" class="expanse-list-item">
-        <option value="">Cash</option>
-        <option value="">Online</option>
+    <select id="payment-mode" class="expanse-list-item">
+        <option value="cash">Cash</option>
+        <option value="online">Online</option>
     </select>
 
 
     <label for="transactions-type">Transactions Type</label>
-    <select id="" class="expanse-list-item">
-        <option value="" >Income <span>+</span></option>
-        <option value="">Expanse <span>-</span></option>
+    <select id="payment-type" class="expanse-list-item">
+        <option value="income" >Income <span>+</span></option>
+        <option value="expanse">Expanse <span>-</span></option>
     </select>
 
 
@@ -158,15 +160,15 @@
 
 
 <div class="expanse-category-disc">
-    <select id="" class="expanse-list-item">
-        <option value="">Saving</option>
-        <option value="">Funds</option>
-        <option value="">Cash Balance</option>
-        <option value="">Bank Balance</option>
+    <select id="payment-category" class="expanse-list-item">
+        <option value="saving">Saving</option>
+        <option value="funds">Funds</option>
+        <option value="cash balance">Cash Balance</option>
+        <option value="bank balance">Bank Balance</option>
     </select>
 
 
-    <input type="text" id="" class="expanse-list-item" placeholder="Disription" list="category">
+    <input type="text" id="payment-text" class="expanse-list-item" placeholder="Disription" list="category">
     <datalist id="category">
         <option value="Food"></option>
     </datalist>
@@ -176,9 +178,9 @@
     
 
     <label for="">Date</label>
-    <input type="date" id="" class="expanse-list-item">
+    <input type="date" id="payment-date" class="expanse-list-item">
 
-    <button class="save-transaction-button expanse-list-item">Save Transaction</button>
+    <button class="save-transaction-button expanse-list-item" onclick="saveTransaction()">Save Transaction</button>
 
     </div>
 </section>
@@ -189,8 +191,9 @@
 
     <h1>Saving</h1>
     <div class="home-data-container">
+    <button class="edit"><i class="fa-solid fa-pencil"></i></button>
     <h3 class="text">Savings</h3>
-    <h3 class="text amount-text" id="saving-amount">₹0 </h3>
+    <h3 class="text amount-text" >₹0 </h3>
 </div>
 
 </div>
@@ -198,8 +201,20 @@
 </section>
 
 
+<section class="records-section" id="records-section">
+
+<div class="records-page" id="parent-div">
+    
+   
+
+
+</div>
+
+</section>
+
 </main>
 
+<script src="/scripts/transaction.js"></script>
 <script src="/scripts/aside-button.js"></script>
 <script src="/scripts/switch-page.js"></script>
 <script src="/scripts/edit-amount.js"></script>
