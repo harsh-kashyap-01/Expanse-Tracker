@@ -20,7 +20,7 @@ function saveTransaction(){
 
    if(paymentAmount != ""){
      let newDiv = document.createElement("div");
-
+      newDiv.classList.add("new-div");
 
 
 
