@@ -56,7 +56,9 @@
         border-top: 1px solid #ddd;
         border-right: none;
 
-        z-index: 1000;
+        z-index: 10;
+
+        background: linear-gradient(to bottom , #bdcedfd2, rgba(214, 213, 213, 0.863));
     }
 
     .aside-bar-buttons{
@@ -68,9 +70,9 @@
     }
 
     main{
-        width: 100%;
-        left: 0;
-        top: 60px;
+        width: 100%; 
+        left: 0px;
+        top: 0px;
         padding: 15px;
         padding-bottom: 80px; /* Space for bottom menu */
         box-sizing: border-box;
