@@ -80,7 +80,7 @@ header{
             min-height: 60vh;
             border-radius: 5px;
             gap: 2px;
-            background-color: white;
+            background: linear-gradient(to bottom , #d8ecff, rgb(255, 255, 255));
             box-shadow: 0px 0px 10px 0.5px rgba(128, 128, 128, 0.438);
             
         }
