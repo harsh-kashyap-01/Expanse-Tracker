@@ -43,6 +43,7 @@ header{
 
     header{
         position:sticky;
+        z-index:100;
         width: 100%;
         min-height: 60px;
         padding: 0 15px;
