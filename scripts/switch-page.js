@@ -38,7 +38,7 @@ function savingBut(){
 }
 
 function records(){
-    recordPage.style.display = "block";
+    recordPage.style.display = "flex";
     savingPage.style.display = "none";
     expansePage.style.display = "none";
     dashboardPage.style.display = "none";
