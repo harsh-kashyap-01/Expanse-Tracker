@@ -3,7 +3,7 @@
 
 
 let parentDiv = document.getElementById("parent-div");
-let icon = "";
+
 
 function saveTransaction(){
 
@@ -51,16 +51,6 @@ deleteBut.addEventListener("click", () => {
     newDiv.appendChild(deleteBut);
 parentDiv.appendChild(newDiv);
 
-if(paymentType === "income"){
-    document.getElementById("paymentColor").forEach(el => {
-        document.getElementById("paymentColor").style.backgroundColor = "green"
-    });
-}
-if(paymentType === "expanse"){
-    document.getElementById("paymentColor").forEach(el => {
-        document.getElementById("paymentColor").style.backgroundColor = "red"
-    });
-}
 
 
    }
