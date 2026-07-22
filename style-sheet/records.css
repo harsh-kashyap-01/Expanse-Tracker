@@ -2,7 +2,6 @@
 .records-section{
     width: 100%;
     height: auto;
-    min-height:90vh;
     align-items: center;
     text-align: center;
     display:none;
@@ -14,7 +13,7 @@
     overflow-x: hidden;
     overflow-y: scroll;
     height: auto;
-    min-height: 80vh;
+    min-height: 90vh;
     border-radius: 10px;
     width:100%;
     
