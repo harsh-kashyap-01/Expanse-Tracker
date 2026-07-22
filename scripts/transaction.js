@@ -20,9 +20,6 @@ function saveTransaction(){
 
    if(paymentAmount != ""){
      let newDiv = document.createElement("div");
-     let paymentTypeBox = document.createElement("p");
-     paymentTypeBox.id = "payment-box";
-    newDiv.className = "new-div"
 
 
 
