@@ -52,7 +52,6 @@ parentDiv.appendChild(newDiv);
 
    }
    
-   document.getElementById("paymentColor").appendChild(paymentTypeBox);
 
    if(paymentCategory === "saving"){
         saving -= paymentAmount;
