@@ -89,6 +89,6 @@ header{
             width: 100%;
             height: 5vh;
             border: none;
-            background-color: none;
+            background-color: transparent;
         }
 }
